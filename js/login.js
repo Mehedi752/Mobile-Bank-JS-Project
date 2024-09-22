@@ -11,7 +11,7 @@ document.getElementById('login-button').addEventListener('click', function (even
     // Validity Condition.
     if (phoneNumber === '1234' && pinNumber === '1234') {
         console.log("You are logged in.");
-        window.location.href = '/home.html';
+        window.location.href = 'home.html';
     }
 
     else
