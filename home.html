@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Home Page</title>
+    <!-- Add Tailwind CSS & Daisy UI CDN. -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <main class="flex justify-center pt-[50px] lg:pt-[100px] bg-white">
+
+        <div class="mockup-phone border-primary">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-3 justify-start items-start pt-[50px] px-[30px] bg-white">
+
+                    <div class="">
+                        <div id="current-account-balance" class="font-extrabold text-[14px]">89400</div>
+                        <div id="balance-desc" class="text-[12px]">Available Balance</div>
+                    </div>
+
+
+                    <div class="divider"></div>
+
+
+                    <!-- Transaction Box. -->
+                    <div class="grid grid-cols-2 gap-2">
+
+                        <div class="">
+                            <button id="add-money-box-button"
+                                class="w-[125px] btn bg-white flex gap-2 items-center border border-solid border-[#0808081A] rounded-[12px] p-3">
+                                <img src="./images/add-money.png" alt="" class="">
+                                <p class="text-[12px]">Add Money</p>
+                            </button>
+                        </div>
+
+                        <div class="">
+                            <button id="cash-out-box-button"
+                                class="w-[125px] btn bg-white flex gap-2 items-center border border-solid border-[#0808081A] rounded-[12px] p-3">
+                                <img src="./images/cash-out.png" alt="" class="">
+                                <p class="text-[12px]">Cash Out</p>
+                            </button>
+                        </div>
+
+                        <div class="">
+                            <button id="transactions-box-button"
+                                class="w-[125px] btn bg-white flex gap-2 items-center border border-solid border-[#0808081A] rounded-[12px] p-3">
+                                <img src="./images/transactions.png" alt="" class="w-[20px] h-[20px]">
+                                <p class="text-[12px]">Transactions</p>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                    <div class="divider"></div>
+
+
+                    <!-- Add Money Form. -->
+                    <div id="add-money-form"
+                        class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl border border-solid border-blue-700">
+                        <form class="card-body">
+
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount</span>
+                                </label>
+                                <input id="add-money-amount" type="text" placeholder="Enter Your Amount"
+                                    class="input input-bordered" required />
+                            </div>
+
+                            <div class="form-control">
+
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+
+                                <input id="add-money-pin" type="pin" placeholder="Enter Your Pin"
+                                    class="input input-bordered" required />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot Password?</a>
+                                </label>
+                            </div>
+
+                            <div class="form-control mt-6">
+                                <button id="add-money-button" class="btn btn-primary">Add Money</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+
+
+                    <!--Cash Out Form. -->
+                    <div id="cash-out-form"
+                        class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl border border-solid border-blue-700">
+                        <form class="card-body">
+
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount</span>
+                                </label>
+                                <input id="cash-out-amount" type="text" placeholder="Enter Your Amount"
+                                    class="input input-bordered" required />
+                            </div>
+
+                            <div class="form-control">
+
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+
+                                <input id="cash-out-pin" type="pin" placeholder="Enter Your Pin"
+                                    class="input input-bordered" required />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot Password?</a>
+                                </label>
+                            </div>
+
+                            <div class="form-control mt-6">
+                                <button id="cash-out-button" class="btn btn-primary">Cash Out</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+
+                    <!-- Transaction History. -->
+                     <div id="transactions-history" class="hidden">
+                        <h2 class="text-[20px] font-bold">Transactions History :</h2>
+                        <div id="transactions-container" class=""></div>
+                     </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        
+        <script src="./js/features.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/addMoney.js"></script>
+        <script src="./js/cashOut.js"></script>
+    </main>
+</body>
+
+</html>
